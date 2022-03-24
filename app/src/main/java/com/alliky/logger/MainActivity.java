@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Logger.init(true);
+        Logger.init();
 
         Logger.d("Logger", "初始化成功");
 
