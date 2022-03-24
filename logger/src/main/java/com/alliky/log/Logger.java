@@ -18,22 +18,13 @@ public final class Logger {
     private static boolean IS_SHOW = false;
     private static String DEFAULT_TAG = "Logger";
 
-    public static void init() {
-        if (BuildConfig.DEBUG) {
-            IS_SHOW = true;
-        } else {
-            IS_SHOW = false;
-        }
-        init(IS_SHOW);
+    public static void init(boolean boo) {
+        IS_SHOW = boo;
+        init(boo, DEFAULT_TAG);
     }
 
-    public static void init(boolean IS_SHOW_LOG) {
-        IS_SHOW = IS_SHOW_LOG;
-        init(IS_SHOW_LOG, DEFAULT_TAG);
-    }
-
-    public static void init(boolean IS_SHOW_LOG, String DEFAULT_TAG) {
-        IS_SHOW = IS_SHOW_LOG;
+    public static void init(boolean boo, String DEFAULT_TAG) {
+        IS_SHOW = boo;
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
                 .showThreadInfo(false)  // (Optional) Whether to show thread info or not. Default true
                 .methodCount(0)         // (Optional) How many method line to show. Default 2
