@@ -15,11 +15,13 @@ public final class Logger {
 
     //控制log等级
     private static int LEVEL = VERBOSE;
+    private static boolean IS_SHOW = false;
 
-    public static void init() {
+    public static void init(boolean isShow) {
+        IS_SHOW = isShow;
         FormatStrategy formatStrategy = PrettyFormatStrategy.newBuilder()
                 .showThreadInfo(false)  // (Optional) Whether to show thread info or not. Default true
-                .methodCount(1)         // (Optional) How many method line to show. Default 2
+                .methodCount(0)         // (Optional) How many method line to show. Default 2
                 .methodOffset(7)        // (Optional) Hides internal method calls up to offset. Default 5
                 .logStrategy(new CustomLogCatStrategy()) // (Optional) Changes the log strategy to print out. Default LogCat
                 .tag("chonglaoban-")   // (Optional) Global tag for every log. Default PRETTY_LOGGER
@@ -29,43 +31,43 @@ public final class Logger {
     }
 
     public static void v(String tag, String message) {
-        if (LEVEL <= VERBOSE) {
+        if (IS_SHOW && LEVEL <= VERBOSE) {
             com.orhanobut.logger.Logger.t(tag).v(message);
         }
     }
 
     public static void d(String tag, Object message) {
-        if (LEVEL <= DEBUG) {
+        if (IS_SHOW && LEVEL <= DEBUG) {
             com.orhanobut.logger.Logger.t(tag).d(message);
         }
     }
 
     public static void d(Object message) {
-        if (LEVEL <= DEBUG) {
+        if (IS_SHOW && LEVEL <= DEBUG) {
             com.orhanobut.logger.Logger.d(message);
         }
     }
 
     public static void i(String tag, String message) {
-        if (LEVEL <= INFO) {
+        if (IS_SHOW && LEVEL <= INFO) {
             com.orhanobut.logger.Logger.t(tag).i(message);
         }
     }
 
     public static void w(String tag, String message) {
-        if (LEVEL <= WARN) {
+        if (IS_SHOW && LEVEL <= WARN) {
             com.orhanobut.logger.Logger.t(tag).w(message);
         }
     }
 
     public static void json(String tag, String message) {
-        if (LEVEL <= WARN) {
+        if (IS_SHOW && LEVEL <= WARN) {
             com.orhanobut.logger.Logger.t(tag).json(message);
         }
     }
 
     public static void e(String tag, String message) {
-        if (LEVEL <= ERROR) {
+        if (IS_SHOW && LEVEL <= ERROR) {
             com.orhanobut.logger.Logger.t(tag).e(message);
         }
     }
