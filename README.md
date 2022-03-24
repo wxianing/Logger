@@ -19,9 +19,12 @@
 使用之前需要初始化
 
 ```
-    Logger.init()//默认初始化方法，debug有打印日志，release禁止打印日志
-    Logger.init(boolean IS_SHOW_LOG)//控制是否可以打印
-    Logger.init(boolean IS_SHOW_LOG, String DEFAULT_TAG)//IS_SHOW_LOG:控制是否可以打印、DEFAULT_TAG：默认打印TAG
+    //默认初始化方法，debug有打印日志，release禁止打印日志
+    Logger.init()
+    //控制是否可以打印
+    Logger.init(boolean IS_SHOW_LOG)
+    //IS_SHOW_LOG:控制是否可以打印、DEFAULT_TAG：默认打印TAG
+    Logger.init(boolean IS_SHOW_LOG, String DEFAULT_TAG)
 ```
 
 
