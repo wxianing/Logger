@@ -34,6 +34,7 @@
 
 
 ```
+
     Logger.v(String tag, String message)
 
     Logger.d(String tag, Object message)
