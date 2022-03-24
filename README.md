@@ -11,7 +11,7 @@
 ### 第二步：应用gradle文件添加
 ```
   	dependencies {
-	        implementation 'com.github.wxianing:Logger:1.0.1'
+	        implementation 'com.github.wxianing:Logger:1.0.2'
 	}
 ```
 
@@ -20,9 +20,6 @@
 使用之前需要初始化
 
 ```
-
-    //默认初始化方法，debug有打印日志，release禁止打印日志
-    Logger.init()
 
     //控制是否可以打印
     Logger.init(boolean IS_SHOW_LOG)
