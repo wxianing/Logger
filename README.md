@@ -1,5 +1,6 @@
-# Logger  使用方法
-###第一步：项目根gradle文件添加
+# Logger
+## 使用步骤
+### 第一步：项目根gradle文件添加
 ```
 	allprojects {
 		repositories {
@@ -7,14 +8,14 @@
 		}
 	}
 ```
-###第二步：应用gradle文件添加
+### 第二步：应用gradle文件添加
 ```
   	dependencies {
 	        implementation 'com.github.wxianing:Logger:1.0.1'
 	}
 ```
 
-##Logger API:
+## Logger API:
 
 使用之前需要初始化
 
