@@ -14,8 +14,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Logger.init(true);
+        initView();
+    }
 
+    private void initView() {
         Logger.d("Logger", "初始化成功");
-
     }
 }

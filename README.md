@@ -22,10 +22,10 @@
 ```
 
     //控制是否可以打印
-    Logger.init(boolean IS_SHOW_LOG)
+    Logger.init(boolean boo)
 
-    //IS_SHOW_LOG:控制是否可以打印、DEFAULT_TAG：默认打印TAG
-    Logger.init(boolean IS_SHOW_LOG, String DEFAULT_TAG)
+    //boo:控制是否可以打印、DEFAULT_TAG：默认打印TAG
+    Logger.init(boolean boo, String DEFAULT_TAG)
 
 ```
 
